@@ -241,7 +241,7 @@ mkdir -p /tftpboot/syslinux/pxelinux.cfg
 \- Add a default configuration file to the pxelinux.cfg/ directory, this is _pxelinux.cfg/default_
 ```
 DEFAULT vesamenu.c32 
-TIMEOUT 150
+TIMEOUT 200
 ONTIMEOUT BootLocal
 PROMPT 0
 MENU TITLE PXE-Boot Menu
@@ -312,7 +312,7 @@ For Ubuntu config:
 ```
 default vesamenu.c32
 prompt 1
-timeout 150
+timeout 200
             
 MENU TITLE PXE Menu
 
