@@ -124,6 +124,9 @@ option space pxelinux;
 \- Installation sources
 - Downloads ISO image file of the OS you want to install. Copy the ISO image or the installation tree (extracted contents of the ISO image) to a network location and perform the installation over the network using the HTTP, and make it accessible over HTTP server.
 - mount the ISO image, using the mount command, to a suitable directory:
+
+**note**: because we install local REPOSITORY, we need to download full REPOSITORY, ex: DVD or cdimages
+
 ```
 mount -t iso9660 /path_to_image/name_of_image.iso /mount_point/iso-contents-root -o loop,ro
 ```
@@ -131,6 +134,15 @@ mount -t iso9660 /path_to_image/name_of_image.iso /mount_point/iso-contents-root
 ```
 cp -r /mount_point/iso-contents-root /http/boot_data/OS/name_of_OS/
 ```
+
+For Ubuntu, you need to download [Ubuntu netboot here](https://cdimage.ubuntu.com/netboot/). Choosing the version, architecture then download the netboot file ex:
+Ubuntu18.04, amd64, netboot.tar.gz, extract the package and cp the kernel and make it available on the HTTP server.
+```
+tar -xf netboot.tar.gz -C /my_dir
+cp /my_dir/ubuntu-installer/amd64/linux /http/boot_data/OS/name_of_ubuntu_OS/netboot
+cp /my_dir/ubuntu-installer/amd64/initrd.gz /http/boot_data/OS/name_of_ubuntu_OS/netboot
+```
+
 In this Lab i choose: CentOS-7.9 minimal , CentOS-8.4 and Ubuntu-18.04
 
 \- Kickstart files
