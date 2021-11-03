@@ -287,9 +287,9 @@ EX: client UUID "b8945908-d6a6-41a9-611d-74a6ab80b83d", MAC address "00:50:56:94
  syslinux/pxelinux.cfg/default
 ```
 
-\- Add configuration files for specific OS to the _boot/_ directory. Point to the **vmlinuz** , **initrd** and **Kickstart file** they were located at HTTP server configuration above.
+\- Add configuration files for specific OS to the _boot/_ directory. Point to the kernel **vmlinuz** , **initrd** and **Kickstart file** they were located at HTTP server configuration above.
 
-example for CentOS config.
+For CentOS config:
 
 ```
 LABEL CentOS-8.4
@@ -307,6 +307,26 @@ LABEL CentOS-7.9
         auto install CentOS-7.9 by Kickstart
         ENDTEXT
 ```
+
+For Ubuntu config:
+```
+default vesamenu.c32
+prompt 1
+timeout 150
+            
+MENU TITLE PXE Menu
+
+LABEL Ubuntu-18.04
+
+	menu label ^Install Ubuntu-18.04
+	kernel http://192.168.69.96/OS/Ubuntu-18.04/netboot/linux
+        append initrd=http://192.168.69.96/OS/Ubuntu-18.04/netboot/initrd.gz ip=dhcp ks=http://192.168.69.96/kickstart/ubuntu18-04.cfg http_proxy="http://10.90.44.199:3128" https_proxy="http://10.90.44.199:3128" no_proxy="localhost,127.0.0.1,::1,192.168.69.96"
+
+TEXT HELP
+Auto install Ubuntu-18.04 by Kickstart
+ENDTEXT
+```
+
 See my _Dockerfile_ for all services and the _docker-compose.yml_ to be more clear
 
 That all, start all the services and boot the client - remember choose the boot option to the **Netboot**
