@@ -1,0 +1,39 @@
+LABEL CentOS-8.4
+        MENU LABEL ^Install CentOS-8.4 (64-bit)
+        KERNEL http://192.168.69.96/OS/CentOS-8.4/iso-contents-root/images/pxeboot/vmlinuz
+        APPEND initrd=http://192.168.69.96/OS/CentOS-8.4/iso-contents-root/images/pxeboot/initrd.img ip=dhcp inst.ks=http://192.168.69.96/kickstart/centos8-4.cfg
+        TEXT HELP
+        auto install CentOS-8.4 by Kickstart
+        ENDTEXT
+
+LABEL Centos7.9-minimal
+        MENU LABEL ^Install Centos7.9-minimal (64-bit)
+        KERNEL http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/vmlinuz
+        APPEND initrd=http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/initrd.img ip=dhcp ks=http://192.168.69.96/kickstart/centos7-9-minimal.cfg
+	TEXT HELP
+        auto install CentOS-7.9 minimal by Kickstart
+        ENDTEXT
+
+LABEL Centos-7.9-minimal-raid
+        MENU LABEL ^Install Centos-7.9-minimal-raid (64-bit)
+        KERNEL http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/vmlinuz
+        APPEND initrd=http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/initrd.img ip=dhcp ks=http://192.168.69.96/kickstart/centos7-9-minimal-raid.cfg
+	TEXT HELP
+        auto install CentOS-7.9 minimal with RAID config by Kickstart
+        ENDTEXT
+
+LABEL Centos-7.9-minimal-lvm
+        MENU LABEL ^Install Centos-7.9-minimal-lvm (64-bit)
+        KERNEL http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/vmlinuz
+        APPEND initrd=http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/initrd.img ip=dhcp ks=http://192.168.69.96/kickstart/centos7-9-minimal-lvm.cfg
+        TEXT HELP
+        auto install CentOS-7.9 minimal with LVM config by Kickstart
+        ENDTEXT
+
+LABEL Centos-7.9-minimal-raid-lvm
+        MENU LABEL ^Install Centos-7.9-minimal-raid-lvm (64-bit)
+        KERNEL http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/vmlinuz
+        APPEND initrd=http://192.168.69.96/OS/CentOS-7.9/iso-contents-root/images/pxeboot/initrd.img ip=dhcp ks=http://192.168.69.96/kickstart/centos7-9-minimal-raid-lvm.cfg
+        TEXT HELP
+        auto install CentOS-7.9 minimal with RAID - LVM config by Kickstart
+        ENDTEXT

@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  
+  dhcpd:
+    image: docker-pxe/dhcp-server
+    container_name: docker-dhcp
+    volumes:
+      - ./dhcp/dhcpd_config:/etc/dhcp
+    network_mode: host
+    restart: unless-stopped
+  
+  tftpd:
+    image: docker-pxe/tftp-server
+    restart: unless-stopped
+    container_name: docker-tftp
+    ports:
+      - 69:69/udp
+    volumes:
+      - ./tftp/bios/boot:/tftpboot/syslinux/boot
+      - ./tftp/bios/pxelinux.cfg:/tftpboot/syslinux/pxelinux.cfg
+      #- ./tftp/efi/boot:/tftpboot/syslinux/efi64/boot
+      #- ./tftp/efi/pxelinux.cfg:/tftpboot/syslinux/efi64/pxelinux.cfg
+
+
+  httpd:
+    image: docker-pxe/http-server
+    restart: unless-stopped
+    container_name: docker-http
+    ports:
+      - 80:80
+    volumes:
+      - ./http/boot_data/kickstart:/var/www/localhost/htdocs/kickstart
+      - ./http/boot_data/OS:/var/www/localhost/htdocs/OS
+      - ./http/logs:/var/www/logs
+

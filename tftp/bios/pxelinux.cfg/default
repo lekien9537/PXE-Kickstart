@@ -1,0 +1,28 @@
+DEFAULT vesamenu.c32 
+TIMEOUT 200
+ONTIMEOUT BootLocal
+PROMPT 0
+MENU TITLE PXE-Boot Menu
+NOESCAPE 1
+
+LABEL BootLocal
+        localboot 0
+        TEXT HELP
+        Boot to local hard disk
+        ENDTEXT
+
+MENU BEGIN CentOS
+MENU TITLE Install CentOS (choose version)
+        LABEL Previous
+        MENU LABEL Previous Menu
+        TEXT HELP
+        Return to previous menu
+        ENDTEXT
+        MENU EXIT
+        MENU SEPARATOR
+        MENU INCLUDE boot/CentOS
+MENU END
+
+LABLE Ubuntu
+	MENU INCLUDE boot/Ubuntu18.04
+

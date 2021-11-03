@@ -1,0 +1,16 @@
+
+default vesamenu.c32
+prompt 1
+timeout 200
+            
+MENU TITLE PXE Menu
+
+LABEL Ubuntu-18.04
+
+	menu label ^Install Ubuntu-18.04
+	kernel http://192.168.69.96/OS/Ubuntu-18.04/netboot/linux
+        append initrd=http://192.168.69.96/OS/Ubuntu-18.04/netboot/initrd.gz ip=dhcp ks=http://192.168.69.96/kickstart/ubuntu18-04.cfg http_proxy="http://10.90.44.199:3128" https_proxy="http://10.90.44.199:3128" no_proxy="localhost,127.0.0.1,::1,192.168.69.96"
+
+TEXT HELP
+Auto install Ubuntu-18.04 by Kickstart
+ENDTEXT
