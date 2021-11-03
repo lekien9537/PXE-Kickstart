@@ -6,7 +6,7 @@ Simple provisioning project: PXE+Kickstart (dhcp, tftp, http), to help you under
 
 \- PXE is the most frequent choice for operating system booting, installation and deployment.
 
-<img src="images/PXE_diagram.png />
+<img src="images/PXE_diagram.png" />
   
 \- PXE Server: A system running a DHCP server, a TFTP server, and an HTTP, HTTPS, FTP, or NFS server. While each server can run on a different physical system.
 
@@ -300,10 +300,11 @@ See my _Dockerfile_ for all services and the _docker-compose.yml_ to be more cle
 That all, start all the services and boot the client - remember choose the boot option to the **Netboot**
 
 See the results:
+
 <img src="images/result1.png" />
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](images/result1.png)  |  ![](images/result3.png)
+![]("images/result1.png")  |  ![]("images/result3.png")
 
 **For you**: add boot for the UEFI-based clients
