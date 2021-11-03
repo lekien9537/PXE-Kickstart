@@ -303,7 +303,9 @@ See the results:
 
 <img src="images/Result1.jpg" />
 
-![Menu boot](images/Result1.jpg "Menu boot") ![Boot](images/Result3.jpg "Boot")
-
+<p float="left">
+  <img src="images/Result1.jpg" width="100" />
+  <img src="images/Result3.jpg" width="100" /> 
+</p
 
 **For you**: add boot for the UEFI-based clients
