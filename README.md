@@ -301,10 +301,9 @@ That all, start all the services and boot the client - remember choose the boot 
 
 See the results:
 
-<img src="images/result1.png" />
+<img src="images/Result1.png" />
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![]("images/result1.png")  |  ![]("images/result3.png")
+![alt-text-1](images/Rsult3.png "title-1") ![alt-text-2](images/Rsult3.png"title-2")
+
 
 **For you**: add boot for the UEFI-based clients
