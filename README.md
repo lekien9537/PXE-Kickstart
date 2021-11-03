@@ -36,6 +36,13 @@ Find more at [Syslinux project](https://wiki.syslinux.org/wiki/index.php?title=T
 
 \- Kickstart installations can be performed using a local DVD, a local hard drive, or a NFS, FTP, HTTP, or HTTPS server (This project use HTTP).
 
+\- To use Kickstart, follow by steps:
+1. Create a Kickstart file.
+2. Make the Kickstart file available on removable media, a hard drive or a network location.
+3. Create boot media, which will be used to begin the installation.
+4. Make the installation source available.
+5. Start the Kickstart installation.
+
 # 3. Lab PXE + Kickstart
 ## 3.1. Overview
 
