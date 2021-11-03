@@ -303,6 +303,9 @@ See the results:
 
 <img src="images/Result1.jpg" />
 
-<img src="images/Result3.jpg" width="100" />
+<p float="left">
+  <img src="/img1.png" width="100" />
+  <img src="images/Result1.jpg" /> 
+</p
 
 **For you**: add boot for the UEFI-based clients
