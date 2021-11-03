@@ -32,6 +32,8 @@ Find more at [Syslinux project](https://wiki.syslinux.org/wiki/index.php?title=T
 # 2. Kickstart
 \- Kickstart is a function that gives you the ability to install a complete operating system based on a predefined list (kickstart file).
 
+\- A kickstart file is a simple text file that contains configuration information for a Linux installation. The system reads this configuration information at boot time and carries out the installation process without any further input from you. You can also use a kickstart file to upgrade your system to a new release.
+
 \- Kickstart installations can be performed using a local DVD, a local hard drive, or a NFS, FTP, HTTP, or HTTPS server (This project use HTTP).
 
 # 3. Lab PXE + Kickstart
