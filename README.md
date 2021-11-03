@@ -333,7 +333,7 @@ See my _Dockerfile_ for all services and the _docker-compose.yml_ to be more cle
 
 That all, start all the services and boot the client - remember choose the boot option to the **Netboot**
 
-See the results:
+See the result:
 
 <img src="images/Result1.jpg" />
 
