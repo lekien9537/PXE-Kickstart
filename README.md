@@ -327,7 +327,7 @@ Auto install Ubuntu-18.04 by Kickstart
 ENDTEXT
 ```
 
-See my _Dockerfile_ for all services and the _docker-compose.yml_ to be more clear
+See my _Dockerfile_ for all services and the _docker-compose.yml_ to be more clear.
 
 That all, start all the services and boot the client - remember choose the boot option to the **Netboot**
 
