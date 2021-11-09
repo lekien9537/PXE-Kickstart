@@ -6,7 +6,9 @@ Simple provisioning project: PXE+Kickstart (dhcp, tftp, http), to help you under
 
 \- PXE is the most frequent choice for operating system booting, installation and deployment.
 
-<img src="images/PXE_diagram.png" />
+<p align="center">
+  <img src="images/PXE_diagram.png" />
+</p>
   
 \- PXE Server: A system running a DHCP server, a TFTP server, and an HTTP, HTTPS, FTP, or NFS server. While each server can run on a different physical system.
 
