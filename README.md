@@ -1,6 +1,6 @@
 # PXE + Kickstart
 Simple provisioning project: PXE+Kickstart (dhcp, tftp, http), to help you understand about the PXE+Kickstart system
-# 1.PXE
+# 1. PXE
 ## 1.1. What is PXE?
 \- Preboot Execution Environment - **PXE Server** – instructs a **client** computer to boot, run or install an operating system directly form a network and uses a small set of Extensible Firmware Interface industry-standard network protocols such as DHCP and TFTP.
 
