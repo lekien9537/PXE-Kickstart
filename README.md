@@ -344,6 +344,8 @@ That all, start all the services and boot the client - remember choose the boot 
 
 See the result:
 
-<img src="images/Result1.jpg" />
+<p align="center">
+  <img src="images/Result1.jpg" width="55%"/>
+</p>
 
 **For you**: add boot for the UEFI-based clients
